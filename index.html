@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="data.js"></script>
+    <script src="generator.js"></script>
+  </head>
+
+  <body class="flex flex-col">
+    <div class="w-full text-3xl font-bold underline text-white title">
+      Idea Generative prompt AI
+    </div>
+    <!-- 'generate' button -->
+    <button class="button" onclick="generate()">Generate sentence</button>
+
+    <!-- generated idea text -->
+    <div class="prompt" id="content">
+      <p>Click On Generate</p>
+    </div>
+  </body>
+</html>
